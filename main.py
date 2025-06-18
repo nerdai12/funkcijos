@@ -122,3 +122,77 @@ print(res)
 print()
 
 print("-----------------------------6 užduotis----------------------")
+
+#Sukurkite Funkciją kuri sugeneruotų random skaičių masyvą ir jį gražintų.
+# Funkcija priima tris kintamuosius, min, max ir length reikšmėms nustatyti
+
+def funkcija(min_reiksme,max_reiksme, ilgis):
+    masyvas = []
+    for _ in range(ilgis):
+        skaicius = random.randint(min_reiksme,max_reiksme)
+        masyvas.append(skaicius)
+    return masyvas
+
+rnd_masyvas = funkcija(10,20,30)
+print("Sugeneruotas masyvas ",rnd_masyvas)
+
+print()
+
+print("-----------------------------7 užduotis----------------------")
+
+#Sukurkite Funkciją kuri panaudotų 6toje užduotyje sugeneruotą masyvą (priimtų kaip kintamąjį),
+# susumuotų ir gražintų reikšmę.
+
+def susumuota(rnd_masyvas):
+    return sum(rnd_masyvas)
+
+res = susumuota(rnd_masyvas)
+print(res)
+
+print()
+
+print("-----------------------------8 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priimtų 6toje užduotyje sugeneruotą masyvą ir gražintų jos skaičių vidurkį
+
+def vidurkis(rnd_masyvas):
+    return sum(rnd_masyvas) / len(rnd_masyvas)
+
+res = vidurkis(rnd_masyvas)
+print(res)
+
+print()
+
+print("-----------------------------9 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priimtų du skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
+# Pirmas skaičius- išoriniam ciklui, antras vidiniam.
+
+def staciakampis(x,y):
+    for _ in range(y):
+        for _ in range(x):
+            print("*", end=" ")
+        print()
+
+staciakampis(10,4)
+
+print()
+
+print("-----------------------------10 užduotis----------------------")
+
+# Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
+# Sakinys - “Šiandien labai graži diena”.
+# (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
+
+def skaiciuoti_tarpus_raides(sakinys):
+    tarpai = sakinys.count(' ')
+    raidziu_kiekis = len(sakinys) - tarpai
+    print("Sakinys: ", sakinys)
+    print("Raidžių (be tarpų): ", raidziu_kiekis)
+    print("Tarpų: ", tarpai)
+
+skaiciuoti_tarpus_raides("Šiandien labai graži diena")
+
+
+
+
