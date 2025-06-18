@@ -1,3 +1,6 @@
+import random
+
+
 def say_hi(): #nieko nepriima ir nieko negrazina
     print("sveikuciai")
 
@@ -48,3 +51,74 @@ print_info("Naglis")
 print_info(35)
 print_info(surname="Mockevicius",birth_year = 1999)
 
+print()
+
+print("-----------------------------1 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priima du kintamuosius, skaičius. Juos susumuoja ir atspausdina.
+
+def sumavimas(a,b):
+    return a+b
+
+res = sumavimas(1,5)
+print(res)
+
+print()
+
+print("-----------------------------2 užduotis----------------------")
+
+# Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina reikšmę. Reikšmė yra : 9.8596;
+# Gautą reikšmę atspausdinkite.
+
+def sim_PISq():
+    return 9.8596
+
+print(sim_PISq())
+PISq = sim_PISq()
+print(PISq)
+
+print()
+
+print("-----------------------------3 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priima du kintamuosius. Funkcija gražina skaičių sandaugą.;
+# Gautą reikšmę atspausdinkite
+
+def sandauga(a,b):
+    return a*b
+
+res = sandauga(2,5)
+print(res)
+
+print()
+
+print("-----------------------------4 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.
+
+masyvas = ["pirmas", "antras", "trečias", "ketvirtas"]
+print(masyvas)
+def nariai(masyvas):
+    for narys in masyvas:
+        print(narys, end = " ")
+    print()
+
+nariai(masyvas)
+
+print()
+
+print("-----------------------------5 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priima du kintamuosius, min ir max reikšmėms nustatyti ir
+# sugeneruoja random int skaičių ir jį gražintų
+
+def min_max(min_num,max_num):
+    return random.randint(min_num,max_num)
+
+skaicius = random.randint(1,10)
+res = min_max(skaicius,skaicius)
+print(res)
+
+print()
+
+print("-----------------------------6 užduotis----------------------")
