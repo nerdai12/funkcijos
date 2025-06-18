@@ -1,4 +1,5 @@
 import random
+from itertools import count
 
 
 def say_hi(): #nieko nepriima ir nieko negrazina
@@ -192,6 +193,89 @@ def skaiciuoti_tarpus_raides(sakinys):
     print("Tarpų: ", tarpai)
 
 skaiciuoti_tarpus_raides("Šiandien labai graži diena")
+
+print()
+
+print("-----------------------------11 užduotis----------------------")
+
+#Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų.
+#Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
+
+def apsuktas_sakinys(sakinys):
+    return sakinys[::-1]
+
+koduotas = apsuktas_sakinys("Rodos lietus kaupiasi")
+print(koduotas)
+
+print()
+
+print("-----------------------------12 užduotis----------------------")
+
+#Sukurti funkciją, kuri apsuka tik žodžius. “Labas rytas” -> “sabal satyr”
+
+def apsuktas_zodis(sakinys):
+    zodziai = sakinys.split()
+    for zodis in zodziai:
+        print(zodis[::-1], end=" ")
+    print()
+
+apsuktas_zodis("Labas rytas")
+
+print()
+
+print("-----------------------------13 užduotis----------------------")
+
+#Sukurkite funkciją, kuri priimtų masyvą ir atspausdintų tik tuos elementus kurie yra skaičiai.
+
+masyvas = ["A","B","C","D",1,2,3,4]
+
+def tik_skaiciai(masyvas):
+    for elementas in masyvas:
+        if isinstance(elementas, (int, float)):
+            print(elementas)
+
+tik_skaiciai(masyvas)
+
+print()
+
+print("-----------------------------14 užduotis----------------------")
+
+#Sukurkite funkciją, kuri iš paduoto masyvo atspausdina tik sveikuosius skaičius.
+#(jei pavyks, patobulinkite, kad funkcija priimtų antrą parametrą True/False,
+#kuris nuspręstų ar spausdins tik sveikuosius skaičius ar skaičius su kableliu
+
+masyvas = [1,2.5,14,7.3,9,0.2]
+
+def sveiki_skaiciai(masyvas):
+    for elementas in masyvas:
+        if isinstance(elementas, (int)):
+            print("Sveiki skaičiai", elementas)
+        else:
+            if isinstance(elementas, (float)):
+                print(elementas)
+
+
+sveiki_skaiciai(masyvas)
+
+print()
+
+print("-----------------------------15 užduotis----------------------")
+
+# Sukurkite funkciją word_count kuri priimtų textą ir gražintų kiek jame yra žodžių
+
+sakinys = "Šiandien labai graži diena"
+
+def word_count(sakinys):
+    zodziai = sakinys.split()
+    count = 0
+    for zodis in zodziai:
+        count += 1
+    return count
+
+res = word_count(sakinys)
+print("Žodžių skaičius ", res)
+
+
 
 
 
