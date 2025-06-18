@@ -275,7 +275,39 @@ def word_count(sakinys):
 res = word_count(sakinys)
 print("Žodžių skaičius ", res)
 
+print()
 
+print("-----------------------------16 užduotis----------------------")
+
+#Sukurkite funkciją kuri priima du parametrus. Skaičių masyvą ir boolean.
+#Funkcija gražina prafiltruotą masyvą.
+#Kai antras parametras True/tik poriniais skaičiais, False/tik neporiniais skaičiais.
+
+masyvas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+poriniai = True
+
+def filtruotas_masyvas(masyvas,poriniai):
+    rezultatas = []
+    for skaicius in masyvas:
+        if poriniai and skaicius % 2 == 0:
+            rezultatas.append(skaicius)
+        elif not poriniai and skaicius % 2 != 0:
+            rezultatas.append(skaicius)
+    return rezultatas
+
+res = filtruotas_masyvas(masyvas,poriniai)
+print(res)
+print()
+
+print()
+
+print("-----------------------------17 užduotis----------------------")
+
+#Sukurkite funkciją number_is_prime. Funkcija priima skaičių, gražina True/False ar skaičius pirminis
+
+num = 14
+
+def number_is_prime (num):
 
 
 
