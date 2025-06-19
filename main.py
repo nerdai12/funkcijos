@@ -386,13 +386,77 @@ def longest_word(text):
 longest_word(text)
 
 
-longest_word(text)
+print()
 
+print("-----------------------------Sunkesni 1 užduotis----------------------")
 
+#Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje
+#pridedant “---” pradžioje ir gale. PVZ (---labas---)
 
+text = "Parašykite funkciją, kurios argumentas būtų tekstas"
 
+def tekstas_su_priedais(text):
+    print("---", text, "---")
 
+tekstas_su_priedais(text)
 
+print()
 
+print("-----------------------------Sunkesni 2 užduotis----------------------")
 
+#Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu.
+#Jei tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
+
+def generate_rnd_str(length):
+  symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890"
+  text = ""
+  for i in range(length):
+    text += symbols[random.randint(0,len(symbols) -1)]
+  return text
+
+string = generate_rnd_str(10)
+print(string)
+
+i = 0
+
+while i < len(string):
+    if string[i].isdigit():
+        buffer = ""
+        while i < len(string) and string[i].isdigit():
+            buffer += string[i]
+            i += 1
+        print("[", buffer, "]", sep="")
+    else:
+        print(string[i])
+        i += 1
+
+print()
+
+print("-----------------------------Sunkesni 3 užduotis----------------------")
+
+#Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
+#(išskyrus vienetą ir patį save). Pvz padavus 10 turi grąžinti 2,  o padavus 20 gražintų 4
+
+def dalikliu_kiekis(a):
+    kiek = 0
+    for i in range(2,a):
+        if a % i == 0:
+            kiek += 1
+    return kiek
+
+dalikliu_kiekis(10)
+print(dalikliu_kiekis(10))
+print(dalikliu_kiekis(20))
+
+print()
+
+print("-----------------------------Sunkesni 4 užduotis----------------------")
+
+#Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77.
+#Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją
+
+masyvas = [random.randint(33,77) for _ in range(100)]
+print(masyvas)
+surusiuotas = sorted(masyvas, key=dalikliu_kiekis, reverse=True)
+print(surusiuotas)
 
