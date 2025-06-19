@@ -460,3 +460,31 @@ print(masyvas)
 surusiuotas = sorted(masyvas, key=dalikliu_kiekis, reverse=True)
 print(surusiuotas)
 
+print()
+
+print("-----------------------------Sunkesni 5 užduotis----------------------")
+
+#Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777.
+#Naudodami 3 uždavinio funkciją iš masyvo suskaičiuokite kiek yra pirminių skaičių
+
+masyvas = [random.randint(333,777) for _ in range(100)]
+print(masyvas)
+
+pirminiu_kiekis = 0
+for skaicius in masyvas:
+    if dalikliu_kiekis(skaicius) == 0: #skaicius yra pirminis
+        pirminiu_kiekis += 1
+print("pirminių skaičių kiekis: ", pirminiu_kiekis)
+
+print()
+
+print("-----------------------------Sunkesni 8 užduotis----------------------")
+
+#Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33.
+#Jeigu tarp trijų paskutinių elementų yra nors vienas ne pirminis skaičius,
+#prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1 iki 33.
+#Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą.
+#Kartokite, kol sąlyga nereikalaus pridėti elemento.
+
+masyvas = [random.randint(1,33) for _ in range(3)]
+print(masyvas)
