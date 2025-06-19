@@ -305,9 +305,93 @@ print("-----------------------------17 užduotis----------------------")
 
 #Sukurkite funkciją number_is_prime. Funkcija priima skaičių, gražina True/False ar skaičius pirminis
 
-num = 14
+
 
 def number_is_prime (num):
+    if num < 2:
+        return False
+    for i in range(2,num):
+        if num % i == 0:
+            return False
+    return True
+
+print(number_is_prime(14))
+print(number_is_prime(5))
+
+print()
+
+print("-----------------------------18 užduotis----------------------")
+
+#Sukurkite funkciją kuri priima du argumentus.
+#Gražina pirmąjį skaičių pakeltą laipsniu tokiu kaip antras skaičius
+
+def pakelta_laipsniu(a,b):
+    return a ** b
+
+print(pakelta_laipsniu(2,5))
+
+print()
+
+print("-----------------------------19 užduotis----------------------")
+
+#Sukurkite funkciją kuri priima skaičių masyvą ir gražina tik nepasikartojančius elementus
+
+masyvas = [random.randint(1,10) for _ in range(15)]
+print(masyvas)
+
+def nesikartoja(masyvas):
+    rezultatas = []
+    for skaicius in masyvas:
+        if masyvas.count(skaicius) == 1:
+            rezultatas.append(skaicius)
+    return rezultatas
+
+print(nesikartoja(masyvas))
+
+print()
+
+print("-----------------------------20 užduotis----------------------")
+
+# Sukurkite funkciją kuri priima tekstą ir atspausdina tekste daugiausiai pasikartojantį simbolį.
+
+text = "Sukurkite funkciją kuri priima tekstą ir atspausdina tekste daugiausiai pasikartojantį simbolį"
+
+def daugiausiai_pasikartojantis(text):
+    daznis = {}
+    for simbolis in text:
+        daznis[simbolis] = daznis.get(simbolis, 0) + 1
+        dazniausias = max(daznis, key=daznis.get)
+        kiek = daznis[dazniausias]
+    print("Dažniausiai pasikartojantis simbolis  yra '", str(dazniausias), "' ir pasikartoja ", kiek, " kartų")
+
+
+daugiausiai_pasikartojantis(text)
+
+print()
+
+print("-----------------------------21 užduotis----------------------")
+
+# Sukurkite funkciją kuri priima tekstą ir atspausdina jame esantį ilgiausią žodį.
+
+text = "Sukurkite funkciją kuri priima tekstą ir atspausdina jame esantį ilgiausią žodį"
+
+def longest_word(text):
+    zodziai = text.split()
+    ilgiausias = ""
+    for zodis in zodziai:
+        if len(zodis) > len(ilgiausias):
+            ilgiausias = zodis
+    print("Ilgiausias žodis: ", ilgiausias)
+
+longest_word(text)
+
+
+longest_word(text)
+
+
+
+
+
 
 
 
