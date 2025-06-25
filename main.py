@@ -488,3 +488,37 @@ print("-----------------------------Sunkesni 8 užduotis----------------------")
 
 masyvas = [random.randint(1,33) for _ in range(3)]
 print(masyvas)
+
+def ar_pirminis(a):
+    if a < 2:
+        return False
+    for i in range(2,a):
+        if a % i == 0:
+            return False
+    return True
+
+while not all(ar_pirminis(x) for x in masyvas[-3:]):
+    naujas = random.randint(1, 33)
+    masyvas.append(naujas)
+
+print("Galutinis masyvas:", masyvas)
+
+print("-----------------------------Sunkesni 9 užduotis----------------------")
+
+#Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų,
+#kurie yra atsitiktiniai skaičiai nuo 1 iki 100. Jeigu tokio didelio masyvo (ne atskirai mažesnių)
+#pirminių skaičių vidurkis mažesnis už 70, suraskite masyve mažiausią skaičių (nebūtinai pirminį)
+#ir prie jo pridėkite 3. Vėl paskaičiuokite masyvo pirminių skaičių vidurkį ir jeigu mažesnis nei 70 viską kartokite.
+
+masyvas = [
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)],
+    [random.randint(1,100) for _ in range(10)]
+    ]
